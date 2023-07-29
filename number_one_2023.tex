@@ -92,10 +92,13 @@
 \DeclareMathOperator{\Corr}{Corr}
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\E}{\mathbb{E}}
-\newcommand \hVar{\widehat{\Var}}
-\newcommand \hCorr{\widehat{\Corr}}
-\newcommand \hCov{\widehat{\Cov}}
-\newcommand \cN{\mathcal{N}}
+\newcommand{\hVar}{\widehat{\Var}}
+\newcommand{\hCorr}{\widehat{\Corr}}
+\newcommand{\hCov}{\widehat{\Cov}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
 \let\P\relax
 \DeclareMathOperator{\P}{\mathbb{P}}
 
@@ -167,6 +170,7 @@ style=alphabetic]{biblatex}
 
 \section{Ним-сложение}
 
+\newcommand{\nim}{
 $\mathbb{Z}_{\geq 0}$ — целые неотрицательные числа.
 
 $\oplus$ — ним-сложение: переводим число в двоичную систему счисления, складываем побитно без переноса (0+0=0, 1+0=1, 1+1=0), 
@@ -197,44 +201,12 @@ $\otimes$ — ним-умножение: переводим число в дво
   \item Придумай числа $a$, $b$ и $c$ такие, что $a\otimes (b\oplus c) = a\otimes b \oplus a\otimes c$.
   \item Придумай числа $a$, $b$ и $c$ такие, что $a\otimes (b\oplus c) \neq a\otimes b \oplus a\otimes c$.
 \end{enumerate}
+}
 
 \newpage
-\setcounter{section}{0}
-
-\section{Ним-сложение}
-
-$\mathbb{Z}_{\geq 0}$ — целые неотрицательные числа.
-
-$\oplus$ — ним-сложение: переводим число в двоичную систему счисления, складываем побитно без переноса (0+0=0, 1+0=1, 1+1=0), 
-переводим обратно в исходную систему счисления. 
-
-$\otimes$ — ним-умножение: переводим число в двоичную систему счисления, побитно умножаем, 
-переводим в исходную систему счисления. 
-
-\begin{enumerate}
-  \item Найди $2 \oplus 2$, $10 \oplus 5$, $\underbrace{5 \oplus 5 \oplus \ldots \oplus 5}_{2023 \text{ раза}}$.
-  \item Найди $2 \otimes 2$, $10 \otimes 5$, $\underbrace{5 \otimes 5 \otimes \ldots \otimes 5}_{2023 \text{ раза}}$.
-  \item Всегда ли $a \oplus b$ = $b \oplus a$? 
-  Придумай числа, нарушающие равенство, или объясни, почему равенство верно всегда. 
-  \item Всегда ли $a \otimes b$ = $b \otimes a$? 
-  Придумай числа, нарушающие равенство, или объясни, почему равенство верно всегда. 
-  \item Реши уравнение $x \oplus 7 = 0$, $9 \oplus y = 11$. 
-  \item Объясни, как устроено ним-вычитать числа? 
-  Ним-вычитание должно быть обратным действием к ним-сложению.
-  \item Придумай числа $a$, $b$ и $c$ такие, что $a\cdot (b\oplus c) = a\cdot b \oplus a\cdot c$.
-  \item Придумай числа $a$, $b$ и $c$ такие, что $a\cdot (b\oplus c) \neq a\cdot b \oplus a\cdot c$.
-  \item Реши уравнения $3\cdot x \oplus 12 = 0$ и $x \oplus x \oplus x \oplus 12 = 0$.
-  \item В сумме $5 \oplus 10 \oplus 7$ замени одно из чисел на \textit{большее}, чтобы сумма превратилась в ноль.
-  \item В сумме $5 \oplus 10 \oplus 7$ замени одно из чисел на \textit{меньшее}, чтобы сумма превратилась в ноль.
-  \item Миша ним-складывает числа не превосходящие $10$, сколько максимум он может получить?
-  \item Маша ним-складывает числа не превосходящие $7$, сколько максимум она может получить?
-  \item Реши уравнение $x \otimes 3 = 6$ и $x \otimes 3 = 0$.
-  \item Реши уравнение $x \otimes x \oplus 3 \otimes x \oplus 2 = 0$.
-  \item Придумай числа $a$, $b$ и $c$ такие, что $a\otimes (b\oplus c) = a\otimes b \oplus a\otimes c$.
-  \item Придумай числа $a$, $b$ и $c$ такие, что $a\otimes (b\oplus c) \neq a\otimes b \oplus a\otimes c$.
-\end{enumerate}
-
-
+\nim
+\newpage
+\nim
 
 
 \newcommand{\daytwo}{
@@ -258,7 +230,8 @@ $\otimes$ — ним-умножение: переводим число в дво
     \item Построй функцию Шпрага-Гранди для одной кучки из $n$ камней.
     \item Определи выигрышный ход в ситуации с тремя кучками из 2, 5 и 7 камней.
   \end{enumerate}
-  \item Кегли. В ряд стоят кегли. За ход разрешается выбить шаром одну или две рядом стоящие кегли. 
+  \item В ряд стоят кегли. За ход разрешается выбить шаром одну или две рядом стоящие кегли. 
+  Выигрывает тот, кто сбивает последнюю кеглю.
   Определи выигрышный ход для ряда из 8 кегель. 
   
 \end{enumerate}
@@ -267,6 +240,138 @@ $\otimes$ — ним-умножение: переводим число в дво
 \daytwo
 \vfill
 \daytwo
+\newpage
+
+
+\newcommand{\dayfour}{
+\begin{enumerate}
+  \item Отбросив предрассудки, выполни действия с $p$-адическими числами:
+  
+  \begin{minipage}{\linewidth}
+    \begin{multicols}{3}
+      \begin{enumerate}    
+      \item $567 + 134$ в $\Z_8$;
+      \item $\ldots 3333 + 123$ в $\Z_4$;
+      \item $\ldots 2222 + 1$ в $\Z_3$;
+      \item $\ldots 1313132 \cdot 3$ в $\Z_5$;        
+      \end{enumerate}
+    \end{multicols}
+  \end{minipage}
+  \item Присмотрись к равенству
+  \[
+    2 + 3 \cdot 5^1 + 1 \cdot 5^2 + 3 \cdot 5^3 + 1 \cdot 5^4 + \ldots = 1/3.
+  \]
+  Аккуратно объясни, когда и почему равенство является абсолютно верным?
+  \item Запиши полностью:
+  
+  \begin{minipage}{\linewidth}
+    \begin{multicols}{3}
+      \begin{enumerate}    
+    \item $-1$ в $\Z_{10}$;
+    \item $-3$ в $\Z_5$;
+    \item $-10$ в $\Z_3$;
+  \end{enumerate}
+\end{multicols}
+\end{minipage}
+\item Реши уравнения в $p$-адических числах
+
+\begin{minipage}{\linewidth}
+  \begin{multicols}{3}
+    \begin{enumerate}    
+  \item $x + 3 = 0$ в $\Z_7$;
+    \item $x + 7 = \ldots 5555$ в $\Z_9$;
+    \item $3x = 1$ в $\Z_5$;
+    \item $2x = 1$ в $\Z_5$;
+    \item $5x = 2$ в $\Z_7$;
+    \item $9x = -1$ в $\Z_{10}$;  
+    \item $2x = 117$ в $\Z_5$;
+  \end{enumerate}
+\end{multicols}
+\end{minipage}
+  \item Присмотрись к равенству
+  \[
+    1 +  5 + 5^2 + 5^3 + 5^4 + \ldots = -1/8.
+  \]
+  Аккуратно объясни, когда и почему равенство является абсолютно верным?
+\end{enumerate}
+}
+
+\newpage
+\dayfour
+\vfill
+\dayfour
+\newpage
+
+\newcommand{\dayfive}{
+$\Z_p$ — целые $p$-адические числа, $\Q_p$ — дробные $p$-адические числа;
+\begin{enumerate}
+  \item Приведи пример уравнения, которое можно решить в $\Z_3$ и невозможно решить в $\Z_2$. 
+  
+  Реши его в $\Z_3$.
+  \item Приведи пример уравнения, которое можно решить в $\Z_2$ и невозможно решить в $\Z_3$.
+  
+  Реши его в $\Z_2$.
+  \item Запиши 
+  \begin{minipage}{\linewidth}
+    \begin{multicols}{3}
+      \begin{enumerate}    
+    \item $2/3$ в $\Q_3$;
+      \item $5/48$ в $\Q_2$;
+      \item $5/21$ в $\Q_7$;
+    \end{enumerate}
+  \end{multicols}
+  \end{minipage}
+  \item Серёжа Ламзин утверждает, что $1/3$  — это целое число,
+  Ваня Адо утверждает, что $1/3$ — это дробное число,
+  а Вика Луковская, что делить 1 на 3 нельзя. 
+
+  В каких числах прав каждый из них?
+  \item Найди правые три знака каждого корня уравнения или докажи, что решений нет:
+  
+  \begin{minipage}{\linewidth}
+    \begin{multicols}{3}
+      \begin{enumerate}    
+    \item $x^2 = 2$ в $\Z_7$;
+    \item $x^2 = 2$ в $\Z_5$;
+      \item $x^2 = -1$ в $\Z_7$;
+      \item $x^2 = -1$ в $\Z_5$;
+      \item $x^2 = 17$ в $\Z_2$;
+      \item $x^3 = 2$ в $\Z_5$;
+    \end{enumerate}
+  \end{multicols}
+  \end{minipage}
+  \item (*) При каком условии на обычное целое число $m$ уравнение $x^2 = m$ имеет решение в $\Z_2$?
+\end{enumerate}
+}
+
+\newpage
+\dayfive
+\vfill
+\dayfive
+\newpage
+
+\newcommand{\zagon}{Загоночная контрольная :)
+
+\begin{enumerate}
+  \item Найдит ним-сумму $2\oplus 3 \oplus 4 \oplus 5 \oplus 6$.
+  \item В ряд стоят кегли. За ход разрешается выбить шаром одну или две рядом стоящие кегли. 
+  Выигрывает тот, кто сбивает последнюю кеглю.
+  Определи выигрышный ход для ряда из 8 кегель. 
+  \item Запиши $1/5$ в $\Z_2$ и $-1/6$ в $\Q_3$.
+  \item Посмотри на уравнение $x^2=x$ в $\Z_{10}$. 
+  Найди два его корня абсолютно точно, а для третьего корня — правые три знака.
+  \item Какое число ближе к $27$ в $\Z_3$: $26$ или $108$?
+\end{enumerate}
+}
+
+
+
+\newpage
+\zagon
+\vfill
+\zagon
+\vfill
+\zagon
 \newpage
 
 
